@@ -1,0 +1,151 @@
+/* colores */
+:root {
+    --uno: #121826;
+    --dos: #9DA3AE;
+    --tres: #E5E7EB;
+    --cuatro: #212936;
+    --cinco: #DEE9FC;
+    --seiz: #FBE5E6;
+    --siete: #FCEED8;
+    --ocho: #D2D5DA;
+}
+
+body {
+    line-height: 1.5;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Outfit", sans-serif;
+    background: var(--cuatro);
+    background: var(--uno);
+    background-position: center;
+    background-size: cover;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../resources/mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+
+    @media(min-width: 1080px) {
+        background-image: url(../resources/desktop.png);
+    }
+}
+
+img {
+    vertical-align: top;
+    width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+/* estilos para la pagina */
+main {
+    margin: 1rem 0;
+    padding: 0 4.8rem;
+    max-width: 1042px;
+
+    @media(min-width: 1080px) {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.main-textos {
+    margin: 0 auto;
+    max-width: 480px;
+    margin-bottom: 3.7rem;
+    text-align: center;
+    color: #fff;
+}
+
+.main-textos h1 {
+    margin-bottom: 3.2rem;
+    font-size: 3.8rem;
+    font-weight: 600;
+
+    @media(min-width: 1080px) {
+        font-size: 4rem;
+    }
+}
+
+.main-tarjetas {
+    display: grid;
+    gap: 3rem;
+
+    @media(min-width: 1080px) {
+        gap: 5rem;
+        grid-template-columns: repeat(3, 316px);
+        justify-content: space-between;
+    }
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.4rem;
+    border-radius: 15px;
+    background-color: var(--cuatro);
+}
+
+.tarjeta-icono {
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    font-size: 2rem;
+    border-radius: 100%;
+    background-color: red;
+}
+
+.tarjeta-icono.uno {
+    background-color: var(--siete);
+}
+
+.tarjeta-icono.dos {
+    background-color: var(--cinco);
+}
+
+.tarjeta-icono.tres {
+    background-color: var(--seiz);
+}
+
+.tarjeta h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tarjeta p {
+    font-size: 17px;
+    color: #fff;
+}
+
+.tarjeta-img img {
+    border-radius: 1rem;
+}
